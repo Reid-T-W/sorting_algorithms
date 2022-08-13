@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdio.h>
 /**
  * insertion_sort_list - sorts a doubly linked list using insertion sort
  * @list: linked list to be sorted
@@ -11,9 +12,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *x2 = *list;
 	listint_t *x3;
 
-	if ((list == NULL) && ((*list)->next == NULL))
+	if ((list == NULL) || ((*list)->next == NULL))
 	{
-		print_list(*list);
+		return;
 	}
 		x = x->next;
 		s = x;
