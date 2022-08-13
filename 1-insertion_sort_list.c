@@ -12,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *x2 = *list;
 	listint_t *x3;
 
-	if ((list == NULL) || ((*list)->next == NULL))
+	if ((list == NULL) || ((*list)->next == NULL) || ((*list)->prev != NULL))
 	{
 		return;
 	}
