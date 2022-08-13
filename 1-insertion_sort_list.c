@@ -11,13 +11,14 @@ void insertion_sort_list(listint_t **list)
 	listint_t *x2 = *list;
 	listint_t *x3;
 
-	if ((list != NULL) && ((*list)->next != NULL))
+	if ((list == NULL) && ((*list)->next == NULL))
 	{
+		print_list(*list);
+	}
 		x = x->next;
 		s = x;
 		x3 = x->next;
 		x2 = x->prev;
-	}
 	while (x != NULL)
 	{
 		while (x2 != NULL)
