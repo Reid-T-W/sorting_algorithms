@@ -13,6 +13,10 @@ void shell_sort(int *array, size_t size)
 	int temp;
 	size_t j;
 
+	if (size < 2)
+	{
+		return;
+	}
 	/*Getting the starting point for gap*/
 	/*Getting the maximum gap*/
 	while (gap <= size / 3)
