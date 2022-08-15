@@ -15,7 +15,7 @@ void cocktail_sort_list(listint_t **list)
 	bool swapped = true;
 	int nodes = 0;
 
-	if ((list == NULL) || (*list == NULL) || ((*list)->next == NULL))
+	if ((list == NULL) || (*list == NULL))
 	{
 		return;
 	}
