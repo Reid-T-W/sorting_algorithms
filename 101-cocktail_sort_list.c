@@ -19,7 +19,7 @@ void cocktail_sort_list(listint_t **list)
 	{
 		return;
 	}
-	while ((pointer) != NULL)
+	while (pointer != NULL)
 	{
 		nodes = nodes + 1;
 		pointer = pointer->next;
