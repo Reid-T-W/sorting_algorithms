@@ -11,9 +11,20 @@ void cocktail_sort_list(listint_t **list)
 {
 	listint_t *for_first;
 	listint_t *for_second;
+	listint_t *pointer = *list;
 	bool swapped = true;
+	nodes = 0;
 
 	if ((list == NULL) || (*list == NULL) || ((*list)->next == NULL))
+	{
+		return;
+	}
+	while ((pointer) != NULL)
+	{
+		nodes = nodes + 1;
+		pointer = pointer->next;
+	}
+	if (nodes < 1)
 	{
 		return;
 	}
