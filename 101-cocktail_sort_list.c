@@ -24,7 +24,7 @@ void cocktail_sort_list(listint_t **list)
 		nodes = nodes + 1;
 		pointer = pointer->next;
 	}
-	if (nodes < 1)
+	if (nodes < 2)
 	{
 		return;
 	}
