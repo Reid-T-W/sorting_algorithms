@@ -41,4 +41,6 @@ void counting_sort(int *array, size_t size)
 		count_array[array[size - i]] = count_array[array[size - i]] - 1;
 		sort_array[count_array[array[size - i]]] = array[size - i];
 	}
+	free(count_array);
+	free(sort_array);
 }
