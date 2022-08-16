@@ -38,4 +38,5 @@ void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void swap_cocktail(listint_t **list, listint_t **for_first,
 			listint_t **for_second, bool *swa);
+void counting_sort(int *array, size_t size);
 #endif /*HEADER_SORTING*/
