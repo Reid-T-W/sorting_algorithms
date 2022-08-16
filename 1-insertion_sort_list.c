@@ -23,6 +23,8 @@ void insertion_sort_list(listint_t **list)
 		x2 = x->prev;
 	while (x != NULL)
 	{
+		x3 = x->next;
+		x2 = x->prev;
 		while (x2 != NULL)
 		{
 			if (x2->n > x->n)
@@ -42,14 +44,6 @@ void insertion_sort_list(listint_t **list)
 			}
 		}
 		x = x3;
-		/*
-		 * s = x;
-		 */
-		if (x != NULL)
-		{
-			x3 = x->next;
-			x2 = x->prev;
-		}
 	}
 }
 
