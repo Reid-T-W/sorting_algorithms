@@ -40,30 +40,3 @@ void insertion_sort_list(listint_t **list)
 		}
 	}
 }
-
-/**
- * swap - This function swaps two nodes
- * @list: linked list
- * @s: node to swap with x
- * @x: node to swap with s
- * Return: void
- */
-void swap(listint_t **list, listint_t *s, listint_t *x)
-{
-		if (x->next != NULL)
-		{
-			x->next->prev = s;
-		}
-		s->next = x->next;
-		x->next = s;
-		x->prev = s->prev;
-		if (s->prev)
-		{
-			s->prev->next = x;
-		}
-		else
-		{
-			*list = x;
-		}
-		s->prev = x;
-}
