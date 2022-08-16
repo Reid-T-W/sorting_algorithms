@@ -30,7 +30,6 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
-void swap(listint_t **list, listint_t *s, listint_t *x);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void partition(int *array, int start, int end, size_t size);
