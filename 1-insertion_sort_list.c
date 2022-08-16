@@ -29,9 +29,8 @@ void insertion_sort_list(listint_t **list)
 				 * swap(list, s, x);
 				 */
 				swap(list, x2, x);
-				x2 = x;
 				print_list(*list);
-				x2 = x2->prev;
+				x2 = x->prev;
 			}
 			else
 			{
