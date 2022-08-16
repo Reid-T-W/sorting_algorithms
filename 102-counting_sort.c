@@ -31,8 +31,9 @@ void counting_sort(int *array, size_t size)
 	}
 	for (j = 0; j < k + 1; j++)
 	{
-		index = count_array + j;
-		*(index + 1) = *index + *(index + 1);
+		/*index = count_array + j;
+		*(index + 1) = *index + *(index + 1);*/
+		count_array[j + 1] = count_array[j] + count_array[j + 1];
 	}
 	sort_array = malloc(sizeof(int) * size);
 	print_array(count_array, k + 1);
