@@ -60,24 +60,24 @@ void swap(listint_t **list, listint_t *s, listint_t *x)
 {
 	if (s != x)
 	{
-		x->prev->next = x->next;
+		/*
+		 * x->prev->next = x->next;
+		 */
 		if (x->next != NULL)
 		{
-			x->next->prev = x->prev;
+			x->next->prev = s;
 		}
-		if (s->prev == NULL)
+		s->next = x->next;
+		x->next = s;
+		x->prev = s->prev;
+		if (s->prev)
 		{
-			s->prev = x;
-			x->next = s;
-			x->prev = NULL;
-			*list = x;
+			s->prev->next = x;
 		}
 		else
 		{
-			x->prev = s->prev;
-			s->prev->next = x;
-			x->next = s;
-			s->prev = x;
+			*list = x;
 		}
+		s->prev = x;
 	}
 }
