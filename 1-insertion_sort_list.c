@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 /**
  * insertion_sort_list - sorts a doubly linked list using insertion sort
  * @list: linked list to be sorted
