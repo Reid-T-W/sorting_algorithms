@@ -11,12 +11,13 @@ void cocktail_sort_list(listint_t **list)
 {
 	listint_t *for_first;
 	listint_t *for_second;
-	bool swapped = true;
+	bool swapped;
 
 	if ((list == NULL) || (*list == NULL)  || ((*list)->next) == NULL)
 	{
 		return;
 	}
+	swapped = true;
 	while (swapped == true)
 	{
 		swapped = false;
