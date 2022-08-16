@@ -19,18 +19,11 @@ void insertion_sort_list(listint_t **list)
 	{
 		x3 = x->next;
 		x2 = x->prev;
-		while (x2 != NULL)
+		while (x2 && x2->n > x->n)
 		{
-			if (x2->n > x->n)
-			{
-				swap(list, x2, x);
-				print_list(*list);
-				x2 = x->prev;
-			}
-			else
-			{
-				break;
-			}
+			swap(list, x2, x);
+			print_list(*list);
+			x2 = x->prev;
 		}
 		x = x3;
 	}
