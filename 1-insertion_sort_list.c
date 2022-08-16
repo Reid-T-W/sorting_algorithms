@@ -15,12 +15,7 @@ void insertion_sort_list(listint_t **list)
 	{
 		return;
 	}
-		x = x->next;
-		/*
-		 * s = x;
-		 */
-		x3 = x->next;
-		x2 = x->prev;
+	x = x->next;
 	while (x != NULL)
 	{
 		x3 = x->next;
