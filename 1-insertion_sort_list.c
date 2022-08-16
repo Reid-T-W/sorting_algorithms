@@ -7,7 +7,6 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *s;
 	listint_t *x = *list;
 	listint_t *x2 = *list;
 	listint_t *x3;
@@ -17,7 +16,9 @@ void insertion_sort_list(listint_t **list)
 		return;
 	}
 		x = x->next;
-		s = x;
+		/*
+		 * s = x;
+		 */
 		x3 = x->next;
 		x2 = x->prev;
 	while (x != NULL)
@@ -26,15 +27,20 @@ void insertion_sort_list(listint_t **list)
 		{
 			if (x2->n > x->n)
 			{
-				s = x2;
-				swap(list, s, x);
+				/*
+				 * s = x2;
+				 * swap(list, s, x);
+				 */
+				swap(list, x2, x);
 				x2 = x;
 				print_list(*list);
 			}
 			x2 = x2->prev;
 		}
 		x = x3;
-		s = x;
+		/*
+		 * s = x;
+		 */
 		if (x != NULL)
 		{
 			x3 = x->next;
