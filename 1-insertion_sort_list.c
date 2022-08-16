@@ -38,8 +38,6 @@ void insertion_sort_list(listint_t **list)
  */
 void swap(listint_t **list, listint_t *s, listint_t *x)
 {
-	if (s != x)
-	{
 		/*
 		 * x->prev->next = x->next;
 		 */
@@ -59,5 +57,4 @@ void swap(listint_t **list, listint_t *s, listint_t *x)
 			*list = x;
 		}
 		s->prev = x;
-	}
 }
