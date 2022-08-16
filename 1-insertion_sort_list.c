@@ -11,10 +11,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *x2 = *list;
 	listint_t *x3;
 
-	if ((list == NULL) || (*list == NULL) || ((*list)->next == NULL))
-	{
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	}
+
 	x = x->next;
 	while (x != NULL)
 	{
@@ -24,10 +23,6 @@ void insertion_sort_list(listint_t **list)
 		{
 			if (x2->n > x->n)
 			{
-				/*
-				 * s = x2;
-				 * swap(list, s, x);
-				 */
 				swap(list, x2, x);
 				print_list(*list);
 				x2 = x->prev;
