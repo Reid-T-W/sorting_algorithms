@@ -38,9 +38,9 @@ void cocktail_sort_list(listint_t **list)
 		}
 		for_first = for_second;
 		for_second = for_second->prev;
+		swapped = false;
 		while (for_second != NULL)
 		{
-			swapped = false;
 			if ((for_second->n) > (for_first->n))
 			{
 				swap_cocktail(list, &for_first, &for_second, &swapped);
