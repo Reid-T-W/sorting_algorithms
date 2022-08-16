@@ -6,8 +6,8 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *x = *list;
-	listint_t *x2 = *list;
+	listint_t *x;
+	listint_t *x2;
 	listint_t *x3;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
